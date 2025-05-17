@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masmoudi wedding planner | Wedding Planning Services</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap');
+        
+        body {
+          font-family: 'Montserrat', sans-serif;
+          color: #333;
+          background-color: #fcfaf7;
+        }
+        
+        .service-title {
+          font-family: 'Cormorant Garamond', serif;
+          font-weight: 600;
+          color: #2c2c2c;
+          margin-bottom: 1.5rem;
+          position: relative;
+          display: inline-block;
+        }
+        
+        .service-title:after {
+          content: "";
+          position: absolute;
+          bottom: -10px;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 60px;
+          height: 2px;
+          background-color: #d4b78f;
+          transition: width 0.3s ease;
+        }
+        
+        .service-card {
+          border-radius: 8px;
+          overflow: hidden;
+          transition: all 0.4s ease;
+          border: none;
+          height: 100%;
+        }
+        
+        .service-card:hover {
+          transform: translateY(-10px);
+          box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .service-card .card-body {
+          padding: 2.5rem;
+        }
+        
+        .service-icon {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          width: 90px;
+          height: 90px;
+          border-radius: 50%;
+          background-color: rgba(212, 183, 143, 0.1);
+          margin-bottom: 1.5rem;
+          transition: all 0.3s ease;
+        }
+        
+        .service-card:hover .service-icon {
+          background-color: rgba(212, 183, 143, 0.2);
+          transform: scale(1.1);
+        }
+        
+        .feature-list {
+          list-style: none;
+          padding-left: 0;
+          margin-bottom: 2rem;
+        }
+        
+        .feature-list li {
+          position: relative;
+          padding-left: 1.8rem;
+          margin-bottom: 0.75rem;
+          font-size: 0.95rem;
+          color: #555;
+        }
+        
+        .feature-list li:before {
+          content: "\f00c";
+          font-family: "Font Awesome 5 Free";
+          font-weight: 900;
+          position: absolute;
+          left: 0;
+          top: 2px;
+          color: #d4b78f;
+          font-size: 0.85rem;
+        }
+        
+        .premium-btn {
+          background-color: transparent;
+          color: #d4b78f;
+          border: 1px solid #d4b78f;
+          border-radius: 30px;
+          padding: 0.75rem 2rem;
+          font-size: 0.9rem;
+          font-weight: 500;
+          letter-spacing: 1px;
+          text-transform: uppercase;
+          transition: all 0.3s ease;
+          position: relative;
+          overflow: hidden;
+          z-index: 1;
+        }
+        
+        .premium-btn:before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: -100%;
+          width: 100%;
+          height: 100%;
+          background-color: #d4b78f00;
+          transition: all 0.4s ease-in-out;
+          z-index: -1;
+        }
+        
+        .premium-btn:hover {
+          color: white;
+        }
+        
+        .premium-btn:hover:before {
+          left: 0;
+        }
+        
+        .service-card:hover .premium-btn {
+          box-shadow: 0 5px 15px rgba(212, 183, 143, 0.4);
+        }
+        
+        .accent-text {
+          color: #d4b78f;
+          font-weight: 500;
+          letter-spacing: 2px;
+          text-transform: uppercase;
+          font-size: 0.9rem;
+        }
+        
+        .main-heading {
+          font-family: 'Cormorant Garamond', serif;
+          font-weight: 500;
+          font-size: 3rem;
+          margin-bottom: 1.5rem;
+          position: relative;
+          display: inline-block;
+        }
+        
+        .main-heading:after {
+          content: "";
+          position: absolute;
+          bottom: -15px;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 80px;
+          height: 2px;
+          background-color: #d4b78f;
+        }
+        
+        .service-divider {
+          width: 40px;
+          height: 2px;
+          background-color: #d4b78f;
+          margin: 2rem auto;
+        }
+        
+        .section-description {
+          max-width: 700px;
+          margin: 0 auto 3rem;
+          font-size: 1.1rem;
+          line-height: 1.8;
+          color: #666;
+        }
+        
+        .price-tag {
+          display: inline-block;
+          padding: 0.5rem 1.5rem;
+          background-color: rgba(212, 183, 143, 0.1);
+          border-radius: 20px;
+          font-weight: 600;
+          color: #94815d;
+          margin: 1rem 0 1.5rem;
+          border: 1px dashed rgba(212, 183, 143, 0.5);
+        }
+        
+        .expanded-info {
+          max-height: 0;
+          overflow: hidden;
+          transition: max-height 0.5s ease-out;
+        }
+        
+        .expand-toggle {
+          background: none;
+          border: none;
+          color: #d4b78f;
+          font-weight: 500;
+          margin-top: 1rem;
+          cursor: pointer;
+          font-size: 0.9rem;
+          padding: 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        
+        .expand-toggle i {
+          margin-left: 5px;
+          transition: transform 0.3s ease;
+        }
+        
+        .expanded .expanded-info {
+          max-height: 1000px;
+        }
+        
+        .expanded .expand-toggle i {
+          transform: rotate(180deg);
+        }
+      </style>
+</head>
+<body class="bg-light">
+    <!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
+    <div class="container">
+
+      <a class="navbar-brand" href="#home" style="font-family: 'Cormorant Garamond', serif; font-weight: 600; letter-spacing: 1px;">Masmoudi Wedding Planner</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto" style="font-family: 'Montserrat', sans-serif; font-weight: 400; letter-spacing: 1px;">
+          <li class="nav-item mx-2"><a class="nav-link" href="#home">Accueil</a></li>
+          <li class="nav-item mx-2"><a class="nav-link" href="#services">Services</a></li>
+          <li class="nav-item mx-2"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+          <li class="nav-item mx-2"><a class="nav-link" href="#testimonials">Témoignages</a></li>
+          <li class="nav-item mx-2"><a class="nav-link" href="#about">À propos</a></li>
+          <li class="nav-item mx-2"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+  <!-- Hero Section -->
+  <section id="home" class="vh-100 d-flex align-items-center" style="background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(219, 219, 219, 0.5)), url('/assets/img/1744880366983.jpg') center/cover no-repeat; margin-top: 56px;">
+    <div class="container text-center">
+      <div class="row justify-content-center">
+        <div class="col-lg-8 animate__animated animate__fadeIn">
+          <h1 class="display-4 mb-4" style="font-family: 'Cormorant Garamond', serif; font-weight: 500;">Créer des expériences de mariage inoubliables</h1>
+          <p class="lead mb-5" style="font-family: 'Montserrat', sans-serif;">Nous transformons votre vision en une célébration d’amour qui reflète parfaitement votre histoire unique.</p>
+          <a href="#contact" class="btn btn-lg px-5 py-3 me-3" style="background-color: #d4b78f; color: white; font-family: 'Montserrat', sans-serif; letter-spacing: 1px; margin: 15px;">Réserver une consultation</a>
+          <a href="#services" class="btn btn-outline-dark btn-lg px-5 py-3" style="font-family: 'Montserrat', sans-serif; letter-spacing: 1px; margin: 15px;">Découvrir les services</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+<!-- Services Section -->
+<section id="services" class="py-5">
+    <div class="container py-5">
+      <div class="text-center mb-5 animate__animated animate__fadeIn">
+        <h6 class="accent-text mb-3">CE QUE NOUS PROPOSONS</h6>
+        <h2 class="main-heading">Nos services de planification de mariage</h2>
+        <div class="service-divider"></div>
+        <p class="section-description">De la planification complète à la coordination du jour J, nous proposons des formules sur mesure soigneusement élaborées pour transformer votre vision en un événement inoubliable.</p>
+      </div>
+  
+      <div class="row g-4">
+        <!-- Planification Complète -->
+        <div class="col-lg-4 col-md-6 mb-4 animate__animated animate__fadeInUp">
+          <div class="service-card shadow-sm">
+            <div class="card-body text-center">
+              <div class="service-icon mx-auto">
+                <i class="fas fa-calendar-check fa-2x" style="color: #d4b78f;"></i>
+              </div>
+              <h3 class="service-title">Planification Complète</h3>
+              <p class="mb-4">Une expérience luxueuse de A à Z où chaque détail est méticuleusement orchestré pour créer votre événement de rêve sans stress.</p>
+              
+              
+              
+              <ul class="feature-list text-start">
+                <li>Consultations illimitées et accompagnement personnalisé</li>
+                <li>Sélection et gestion de tous les prestataires premium</li>
+                <li>Création d'un concept esthétique sur mesure</li>
+                <li>Planification détaillée du calendrier de l'événement</li>
+              </ul>
+              
+              <div class="expanded-info">
+                <ul class="feature-list text-start">
+                  <li>Gestion complète du budget et des paiements</li>
+                  <li>Coordination complète le jour du mariage (12 heures)</li>
+                  <li>Service de conciergerie premium pour les mariés</li>
+                  <li>Coordination des essayages et rendez-vous beauté</li>
+                </ul>
+              </div>
+              
+              <button class="expand-toggle mx-auto">
+                Découvrir plus <i class="fas fa-chevron-down"></i>
+              </button>
+              
+              <div class="mt-4">
+                <a href="#contact" class="premium-btn">Demander un devis</a>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Planification Partielle -->
+        <div class="col-lg-4 col-md-6 mb-4 animate__animated animate__fadeInUp" style="animation-delay: 0.2s;">
+          <div class="service-card shadow-sm">
+            <div class="card-body text-center">
+              <div class="service-icon mx-auto">
+                <i class="fas fa-clipboard-list fa-2x" style="color: #d4b78f;"></i>
+              </div>
+              <h3 class="service-title">Planification Partielle</h3>
+              <p class="mb-4">L'expertise professionnelle dont vous avez besoin pour parfaire votre vision et sublimer les détails de votre mariage.</p>
+              
+             
+              
+              <ul class="feature-list text-start">
+                <li>des consultations personnalisées approfondies</li>
+                <li>Recommandations de prestataires haut de gamme</li>
+                <li>Conseils pour affiner votre concept esthétique</li>
+                <li>Création du planning détaillé de votre journée</li>
+              </ul>
+              
+              <div class="expanded-info">
+                <ul class="feature-list text-start">
+                  <li>Révision de vos contrats et de votre budget</li>
+                  <li>Coordination complète le jour du mariage (10 heures)</li>
+                  <li>Assistance pour résoudre les défis spécifiques</li>
+                  <li>Conseils sur l'étiquette et le protocole</li>
+                  <li>Support téléphonique et par email dédié</li>
+                </ul>
+              </div>
+              
+              <button class="expand-toggle mx-auto">
+                Découvrir plus <i class="fas fa-chevron-down"></i>
+              </button>
+              
+              <div class="mt-4">
+                <a href="#contact" class="premium-btn">Demander un devis</a>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Coordination Jour J -->
+        <div class="col-lg-4 col-md-6 mb-4 animate__animated animate__fadeInUp" style="animation-delay: 0.4s;">
+          <div class="service-card shadow-sm">
+            <div class="card-body text-center">
+              <div class="service-icon mx-auto">
+                <i class="fas fa-glass-cheers fa-2x" style="color: #d4b78f;"></i>
+              </div>
+              <h3 class="service-title">Coordination Jour J</h3>
+              <p class="mb-4">Déléguez l'orchestration de votre grand jour à nos experts pour vivre pleinement chaque moment mémorable.</p>
+              
+             
+              
+              <ul class="feature-list text-start">
+                <li>2 consultations préparatoires approfondies</li>
+                <li>Création d'un planning chronométré détaillé</li>
+                <li>Confirmation personnelle avec tous les prestataires</li>
+                <li>Coordination de la répétition de la cérémonie</li>
+              </ul>
+              
+              <div class="expanded-info">
+                <ul class="feature-list text-start">
+                  <li>Supervision de l'installation et de la décoration</li>
+                  <li>Présence de notre coordinateur senior (8 heures)</li>
+                  <li>Kit d'urgence premium pour les mariés</li>
+                  <li>Gestion des imprévus et solutions d'urgence</li>
+                  <li>Assistance pour la fin de réception et les départs</li>
+                </ul>
+              </div>
+              
+              <button class="expand-toggle mx-auto">
+                Découvrir plus <i class="fas fa-chevron-down"></i>
+              </button>
+              
+              <div class="mt-4">
+                <a href="#contact" class="premium-btn">Demander un devis</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Option personnalisée -->
+        <div class="col-md-12 text-center mt-5 animate__animated animate__fadeIn" style="animation-delay: 0.6s;">
+          <div class="p-4 rounded" style="background-color: rgba(212, 183, 143, 0.08); border: 1px dashed rgba(212, 183, 143, 0.3);">
+            <h4 style="font-family: 'Cormorant Garamond', serif; font-weight: 600; margin-bottom: 1rem;">Vous ne trouvez pas ce qu'il vous faut ?</h4>
+            <p class="mb-4">Nous créons également des formules sur mesure adaptées à vos besoins spécifiques et à votre budget.</p>
+            <a href="#contact" class="premium-btn">Créer votre formule</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+<!-- Portfolio Section -->
+<section id="portfolio" class="py-5 bg-white">
+  <div class="container py-5">
+    <div class="row mb-5 text-center">
+      <div class="col-lg-12">
+        <h6 style="color: #d4b78f; font-family: 'Montserrat', sans-serif; letter-spacing: 2px; font-weight: 500;">NOS RÉALISATIONS</h6>
+        <h2 class="display-5 mb-4" style="font-family: 'Cormorant Garamond', serif; font-weight: 500;">Portfolio Mariage</h2>
+        <p class="lead mx-auto" style="max-width: 700px; font-family: 'Montserrat', sans-serif;">Chaque mariage raconte une histoire unique. Parcourez notre portfolio pour découvrir les magnifiques célébrations que nous avons eu le plaisir d'organiser.</p>
+      </div>
+    </div>
+
+    <div class="row g-4" id="portfolio-container">
+      <!-- Item 1 -->
+      <div class="col-md-4 portfolio-item">
+        <div class="card border-0 overflow-hidden">
+          <video controls>
+            <source src="assets/portfolio/1.mp4" type="video/mp4">
+            Votre navigateur ne supporte pas la lecture de vidéos.
+          </video>
+          
+        </div>
+      </div>
+
+      <!-- Item 2 -->
+      <div class="col-md-4 portfolio-item">
+        <div class="card border-0 overflow-hidden">
+          <video controls>
+            <source src="assets/portfolio/2.mp4" type="video/mp4">
+            Votre navigateur ne supporte pas la lecture de vidéos.
+          </video>
+         
+        </div>
+      </div>
+
+      <!-- Item 3 -->
+      <div class="col-md-4 portfolio-item">
+        <div class="card border-0 overflow-hidden">
+          <video controls>
+            <source src="assets/portfolio/3.mp4" type="video/mp4">
+            Votre navigateur ne supporte pas la lecture de vidéos.
+          </video>
+          
+        </div>
+      </div>
+
+      <!-- Item 4 -->
+      <div class="col-md-4 portfolio-item">
+        <div class="card border-0 overflow-hidden">
+          <img src="/assets/portfolio/img1.JPG" class="card-img-top" alt="Mariage Champêtre">
+          
+        </div>
+      </div>
+
+      <!-- Item 5 -->
+      <div class="col-md-4 portfolio-item">
+        <div class="card border-0 overflow-hidden">
+          <img src="/assets/portfolio/img2.JPG" class="card-img-top" alt="Mariage Plage">
+         
+        </div>
+      </div>
+
+      <!-- Item 6 -->
+      <div class="col-md-4 portfolio-item">
+        <div class="card border-0 overflow-hidden">
+          <img src="/assets/portfolio/img3.JPG" class="card-img-top" alt="Mariage Classique">
+         
+        </div>
+      </div>
+
+      <!-- Item 7 (Hidden initially) -->
+      <div class="col-md-4 portfolio-item hidden-item" style="display: none;">
+        <div class="card border-0 overflow-hidden">
+          <img src="/assets/portfolio/img4.JPG" class="card-img-top" alt="Mariage Romantique">
+          
+        </div>
+      </div>
+
+      <!-- Item 8 (Hidden initially) -->
+      <div class="col-md-4 portfolio-item hidden-item" style="display: none;">
+        <div class="card border-0 overflow-hidden">
+          <video controls>
+            <source src="assets/portfolio/4.mp4" type="video/mp4">
+            Votre navigateur ne supporte pas la lecture de vidéos.
+          </video>
+          
+        </div>
+      </div>
+
+      <!-- Item 9 (Hidden initially) -->
+      <div class="col-md-4 portfolio-item hidden-item" style="display: none;">
+        <div class="card border-0 overflow-hidden">
+          <video controls>
+            <source src="assets/portfolio/5.mp4" type="video/mp4">
+            Votre navigateur ne supporte pas la lecture de vidéos.
+          </video>
+         
+        </div>
+      </div>
+
+      <!-- Item 10 (Hidden initially) -->
+      <div class="col-md-4 portfolio-item hidden-item" style="display: none;">
+        <div class="card border-0 overflow-hidden">
+          <img src="/assets/portfolio/img7.JPG" class="card-img-top" alt="Mariage Château">
+          
+        </div>
+      </div>
+
+      <!-- Item 11 (Hidden initially) -->
+      <div class="col-md-4 portfolio-item hidden-item" style="display: none;">
+        <div class="card border-0 overflow-hidden">
+          <video controls>
+            <source src="assets/portfolio/6.mp4" type="video/mp4">
+            Votre navigateur ne supporte pas la lecture de vidéos.
+          </video>
+          
+        </div>
+      </div>
+
+      <!-- Item 12 (Hidden initially) -->
+      <div class="col-md-4 portfolio-item hidden-item" style="display: none;">
+        <div class="card border-0 overflow-hidden">
+          <video controls>
+            <source src="assets/portfolio/7.mp4" type="video/mp4">
+            Votre navigateur ne supporte pas la lecture de vidéos.
+          </video>
+         
+        </div>
+      </div>
+
+      <!-- Item 13 (Hidden initially) -->
+      <div class="col-md-4 portfolio-item hidden-item" style="display: none;">
+        <div class="card border-0 overflow-hidden">
+          <video controls>
+            <source src="assets/portfolio/8.mp4" type="video/mp4">
+            Votre navigateur ne supporte pas la lecture de vidéos.
+          </video>
+          
+        </div>
+      </div>
+
+      <!-- Item 14 (Hidden initially) -->
+      <div class="col-md-4 portfolio-item hidden-item" style="display: none;">
+        <div class="card border-0 overflow-hidden">
+          <video controls>
+            <source src="assets/portfolio/9.mp4" type="video/mp4">
+            Votre navigateur ne supporte pas la lecture de vidéos.
+          </video>
+          
+        </div>
+      </div>
+
+      <!-- Item 15 (Hidden initially) -->
+      <div class="col-md-4 portfolio-item hidden-item" style="display: none;">
+        <div class="card border-0 overflow-hidden">
+          <video controls>
+            <source src="assets/portfolio/10.mp4" type="video/mp4">
+            Votre navigateur ne supporte pas la lecture de vidéos.
+          </video>
+         
+        </div>
+      </div>
+
+      <!-- Item 16 (Hidden initially) -->
+      <div class="col-md-4 portfolio-item hidden-item" style="display: none;">
+        <div class="card border-0 overflow-hidden">
+          <video controls>
+            <source src="assets/portfolio/11.mp4" type="video/mp4">
+            Votre navigateur ne supporte pas la lecture de vidéos.
+          </video>
+        </div>
+      </div>
+
+      <!-- Item 17 (Hidden initially) -->
+      <div class="col-md-4 portfolio-item hidden-item" style="display: none;">
+        <div class="card border-0 overflow-hidden">
+          <video controls>
+            <source src="assets/portfolio/12.mp4" type="video/mp4">
+            Votre navigateur ne supporte pas la lecture de vidéos.
+          </video>
+          
+        </div>
+      </div>
+
+      <!-- Item 18 (Hidden initially) -->
+      <div class="col-md-4 portfolio-item hidden-item" style="display: none;">
+        <div class="card border-0 overflow-hidden">
+          <video controls>
+            <source src="assets/portfolio/13.mp4" type="video/mp4">
+            Votre navigateur ne supporte pas la lecture de vidéos.
+          </video>
+         
+        </div>
+      </div>
+
+      <!-- Item 19 (Hidden initially) -->
+      <div class="col-md-4 portfolio-item hidden-item" style="display: none;">
+        <div class="card border-0 overflow-hidden">
+          <img src="/assets/portfolio/img8.JPG" class="card-img-top" alt="Mariage Glamour">
+         
+        </div>
+      </div>
+
+      <!-- Item 20 (Hidden initially) -->
+      <div class="col-md-4 portfolio-item hidden-item" style="display: none;">
+        <div class="card border-0 overflow-hidden">
+          <video controls>
+            <source src="assets/portfolio/14.mp4" type="video/mp4">
+            Votre navigateur ne supporte pas la lecture de vidéos.
+          </video>
+         
+        </div>
+      </div>
+
+      <!-- Item 21 (Hidden initially) -->
+      <div class="col-md-4 portfolio-item hidden-item" style="display: none;">
+        <div class="card border-0 overflow-hidden">
+          <video controls>
+            <source src="assets/portfolio/15.mp4" type="video/mp4">
+            Votre navigateur ne supporte pas la lecture de vidéos.
+          </video>
+          
+        </div>
+      </div>
+    </div>
+
+    <!-- Show More Button -->
+    <div class="text-center mt-5">
+      <button id="show-more-btn" class="btn btn-outline-secondary px-4 py-2" style="font-family: 'Montserrat', sans-serif; letter-spacing: 1px;">
+        VOIR PLUS
+      </button>
+    </div>
+  </div>
+</section>
+  
+
+      
+   <!-- Section Témoignages -->
+<section id="testimonials" class="py-5" style="background-color: #f9f7f5;">
+    <div class="container py-5">
+        <div class="row mb-5 text-center">
+            <div class="col-lg-12">
+                <h6 style="color: #d4b78f; font-family: 'Montserrat', sans-serif; letter-spacing: 2px; font-weight: 500;">COUPLES HEUREUX</h6>
+                <h2 class="display-5 mb-4" style="font-family: 'Cormorant Garamond', serif; font-weight: 500;">Témoignages de Clients</h2>
+                <p class="lead mx-auto" style="max-width: 700px; font-family: 'Montserrat', sans-serif;">Les paroles de nos couples comptent énormément pour nous. Voici ce qu'ils ont à dire sur leur expérience de planification de mariage.</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-10 mx-auto">
+                <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="card border-0 py-5 px-4 shadow-sm">
+                                <div class="card-body text-center">
+                                    <i class="fas fa-quote-left fa-3x mb-4" style="color: #d4b78f;"></i>
+                                    <p class="lead mb-4" style="font-family: 'Montserrat', sans-serif; font-style: italic;">"Un grand remerciement au maestro mohamed masmoudi pour leur effort fourni 
+                                        Aussi je remercie tte l’équipe ‘’ MASMOUDI WEDDIND PLANNER ‘’
+                                        Vraiment no comment ts c’est passé trop bien 
+                                        La décoration top 
+                                        La troupe top 
+                                        L’organisation top 
+                                        … 
+                                        ❤️🙏😍♥️🌺🎉🎈🧨😘💖"</p>
+                                    <h5 style="font-family: 'Cormorant Garamond', serif; font-weight: 600;">Amin Rekik</h5>
+                                    <p style="font-family: 'Montserrat', sans-serif;">Juin 2024</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="carousel-item">
+                            <div class="card border-0 py-5 px-4 shadow-sm">
+                                <div class="card-body text-center">
+                                    <i class="fas fa-quote-left fa-3x mb-4" style="color: #d4b78f;"></i>
+                                    <p class="lead mb-4" style="font-family: 'Montserrat', sans-serif; font-style: italic;">
+                                       "Un grand merci à Masmoudi Wedding Planner et son équipe qui nous ont organisé le mariage de notre rêve.
+                                       Merci d'avoir fait de ce jour un moment unique, inoubliable aux couleurs et thème qui nous ressemblent. Toujours à l’écoute et disponible, Med Masmoudi a su parfaitement comprendre nos attentes et à toujours répondu présent même pour les demandes de dernière minute. Vous avez su parfaitement retranscrire l'ambiance que nous voulions à notre mariage.
+                                       Un grand professionnel que je recommande les yeux fermés pour les futurs mariés 👌
+                                       Merci pour votre gentillesse et professionnalisme ❤️✌️"</p>
+                                    <h5 style="font-family: 'Cormorant Garamond', serif; font-weight: 600;">Mahdi Ben Ayed</h5>
+                                    <p style="font-family: 'Montserrat', sans-serif;">Mars 2023</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                    </div>
+                    
+                    <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Précédent</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Suivant</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Section À propos -->
+<section id="about" class="py-5 bg-white">
+    <div class="container py-5">
+        <div class="row align-items-center">
+            <div class="col-lg-6 mb-5 mb-lg-0">
+  
+                <video  class="img-fluid rounded shadow"  controls autoplay loop muted>
+                  <source src="assets/videos/Untitled video - Made with Clipchamp.mp4" type="video/mp4" >
+                </video>
+                
+            </div>
+            <div class="col-lg-6 ps-lg-5">
+                <h6 style="color: #d4b78f; font-family: 'Montserrat', sans-serif; letter-spacing: 2px; font-weight: 500;">NOTRE HISTOIRE</h6>
+                <h2 class="display-5 mb-4" style="font-family: 'Cormorant Garamond', serif; font-weight: 500;">Rencontrez votre équipe de planification de mariage</h2>
+                <p class="lead mb-4" style="font-family: 'Montserrat', sans-serif;">Masmoudi wedding planner a été fondée en 2014  avec une passion pour créer des célébrations significatives qui reflètent l'histoire d'amour unique de chaque couple.</p>
+                <p class="mb-4" style="font-family: 'Montserrat', sans-serif;">Avec plus d'une décennie d'expérience dans l'industrie du mariage, notre équipe de planificateurs dédiés apporte créativité, organisation et service sincère à chaque mariage que nous planifions. Nous croyons que votre journée de mariage devrait être aussi sans stress et joyeuse que le mariage que vous commencez.</p>
+                <p class="mb-5" style="font-family: 'Montserrat', sans-serif;">Des rassemblements intimes aux grandes célébrations, nous abordons chaque mariage avec le même niveau de soin et d'attention aux détails. Nos relations avec les meilleurs fournisseurs de l'industrie garantissent que chaque aspect de votre journée dépasse vos attentes.</p>
+                <div class="d-flex">
+                    <a href="#contact" class="btn px-4 py-2 me-3" style="background-color: #d4b78f; color: white; font-family: 'Montserrat', sans-serif; letter-spacing: 1px;">Contactez-nous</a>
+                    <a href="#services" class="btn btn-outline-dark px-4 py-2" style="font-family: 'Montserrat', sans-serif; letter-spacing: 1px;">Nos Services</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Section Contact -->
+<section id="contact" class="py-5" style="background-color: #f9f7f5;">
+  <div class="container py-5">
+      <div class="row mb-5 text-center">
+          <div class="col-lg-12">
+              <h6 style="color: #d4b78f; font-family: 'Montserrat', sans-serif; letter-spacing: 2px; font-weight: 500;">CONTACTEZ-NOUS</h6>
+              <h2 class="display-5 mb-4" style="font-family: 'Cormorant Garamond', serif; font-weight: 500;">Commencez à planifier votre mariage de rêve</h2>
+              <p class="lead mx-auto" style="max-width: 700px; font-family: 'Montserrat', sans-serif;">Commençons le voyage vers votre journée de mariage parfaite. Contactez-nous pour une consultation gratuite afin de discuter de votre vision.</p>
+          </div>
+      </div>
+
+      <div class="row justify-content-center">
+          <div class="col-lg-8">
+              <div class="card border-0 shadow-sm">
+                  <div class="card-body p-5">
+                      <form action="https://formspree.io/f/mzzelpeb" method="POST">
+                          <div class="row g-3">
+                              <div class="col-md-6">
+                                  <label for="firstName" class="form-label" style="font-family: 'Montserrat', sans-serif;">Prénom</label>
+                                  <input type="text" class="form-control" id="firstName" name="firstName" required>
+                              </div>
+                              <div class="col-md-6">
+                                  <label for="lastName" class="form-label" style="font-family: 'Montserrat', sans-serif;">Nom de famille</label>
+                                  <input type="text" class="form-control" id="lastName" name="lastName" required>
+                              </div>
+                              <div class="col-md-6">
+                                  <label for="email" class="form-label" style="font-family: 'Montserrat', sans-serif;">Email</label>
+                                  <input type="email" class="form-control" id="email" name="email" required>
+                              </div>
+                              <div class="col-md-6">
+                                  <label for="phone" class="form-label" style="font-family: 'Montserrat', sans-serif;">Téléphone</label>
+                                  <input type="tel" class="form-control" id="phone" name="phone" required>
+                              </div>
+                              <div class="col-12">
+                                  <label for="weddingDate" class="form-label" style="font-family: 'Montserrat', sans-serif;">Date du mariage (si connue)</label>
+                                  <input type="date" class="form-control" id="weddingDate" name="weddingDate">
+                              </div>
+                              <div class="col-12">
+                                  <label for="service" class="form-label" style="font-family: 'Montserrat', sans-serif;">Service souhaité</label>
+                                  <select class="form-select" id="service" name="service" required>
+                                      <option selected disabled value="">Choisir...</option>
+                                      <option>Planification complète</option>
+                                      <option>Planification partielle</option>
+                                      <option>Coordination le jour J</option>
+                                      <option>Sélection du lieu</option>
+                                      <option>Design & Styling</option>
+                                      <option>Mariage à destination</option>
+                                      <option>Autre</option>
+                                  </select>
+                              </div>
+                              <div class="col-12">
+                                  <label for="message" class="form-label" style="font-family: 'Montserrat', sans-serif;">Racontez-nous votre vision</label>
+                                  <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+                              </div>
+                              <div class="col-12 mt-4">
+                                  <button type="submit" class="btn btn-lg w-100 py-3" style="background-color: #d4b78f; color: white; font-family: 'Montserrat', sans-serif; letter-spacing: 1px;">Envoyer</button>
+                              </div>
+                          </div>
+                      </form>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <div class="row mt-5 justify-content-center text-center">
+          <div class="col-md-4 mb-4 mb-md-0">
+              <div class="d-inline-block p-3 rounded-circle mb-3" style="background-color: rgba(212, 183, 143, 0.2);">
+                  <i class="fas fa-envelope fa-2x" style="color: #d4b78f;"></i>
+              </div>
+              <h5 class="mb-3" style="font-family: 'Cormorant Garamond', serif; font-weight: 600;">Email</h5>
+              <p style="font-family: 'Montserrat', sans-serif;">masmoudiwp@gmail.com</p>
+          </div>
+          
+          <div class="col-md-4 mb-4 mb-md-0">
+              <div class="d-inline-block p-3 rounded-circle mb-3" style="background-color: rgba(212, 183, 143, 0.2);">
+                  <i class="fas fa-phone fa-2x" style="color: #d4b78f;"></i>
+              </div>
+              <h5 class="mb-3" style="font-family: 'Cormorant Garamond', serif; font-weight: 600;">Téléphone</h5>
+              <p style="font-family: 'Montserrat', sans-serif;">+216 23 022 022</p>
+          </div>
+          
+          <div class="col-md-4">
+              <div class="d-inline-block p-3 rounded-circle mb-3" style="background-color: rgba(212, 183, 143, 0.2);">
+                  <i class="fas fa-map-marker-alt fa-2x" style="color: #d4b78f;"></i>
+              </div>
+              <h5 class="mb-3" style="font-family: 'Cormorant Garamond', serif; font-weight: 600;">Adresse</h5>
+              <p style="font-family: 'Montserrat', sans-serif;">route tanyour km 2<br>sfax, 3001</p>
+          </div>
+      </div>
+  </div>
+</section>
+
+<!-- Footer (continué) -->
+<footer class="py-5 bg-dark text-white"  style="text-align: center;">
+   
+        
+            <div class="">
+                <h4 class="mb-4" style="font-family: 'Cormorant Garamond', serif; font-weight: 600; letter-spacing: 1px;">Masmoudi wedding Planner</h4>
+                <p style="font-family: 'Montserrat', sans-serif;">Nous sommes là pour vous accompagner à chaque étape de la planification de votre mariage.</p>
+                <h5 class="mb-4" style="font-family: 'Cormorant Garamond', serif; font-weight: 600; letter-spacing: 1px;">Suivez-nous</h5>
+                <div>
+                    <a href="https://www.facebook.com/p/Masmoudi-wedding-planner-%D8%A7%D9%84%D9%85%D8%B5%D9%85%D9%88%D8%AF%D9%8A-%D9%84%D8%AA%D9%86%D8%B8%D9%8A%D9%85-%D8%A7%D9%81%D8%B1%D8%A7%D8%AD%D9%83%D9%85-100064334725761/" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-white me-3"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.instagram.com/masmoudi_wedding_planner/" class="text-white"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+       
+    
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Animation on scroll
+    const observerOptions = {
+      threshold: 0.1
+    };
+    
+    const observer = new IntersectionObserver(function(entries) {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const delay = entry.target.getAttribute('style') ? 
+                        parseFloat(entry.target.getAttribute('style').replace('animation-delay: ', '').replace('s;', '')) : 0;
+          
+          setTimeout(() => {
+            entry.target.classList.add('animate__animated', 'animate__fadeInUp');
+          }, delay * 1000);
+        }
+      });
+    }, observerOptions);
+    
+    document.querySelectorAll('.service-card').forEach(item => {
+      observer.observe(item);
+    });
+    
+    // Expand/collapse functionality
+    document.querySelectorAll('.expand-toggle').forEach(button => {
+      button.addEventListener('click', function() {
+        const cardBody = this.closest('.card-body');
+        cardBody.classList.toggle('expanded');
+        
+        const text = cardBody.classList.contains('expanded') ? 'Voir moins' : 'Découvrir plus';
+        this.innerHTML = text + ' <i class="fas fa-chevron-' + (cardBody.classList.contains('expanded') ? 'up' : 'down') + '"></i>';
+      });
+    });
+
+    // Hover effects
+    document.querySelectorAll('.service-card').forEach(card => {
+      card.addEventListener('mouseenter', function() {
+        this.querySelector('.service-icon').style.transform = 'scale(1.1)';
+      });
+      
+      card.addEventListener('mouseleave', function() {
+        this.querySelector('.service-icon').style.transform = 'scale(1)';
+      });
+    });
+  });
+</script>
+<!-- JavaScript for Show More Functionality -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const showMoreBtn = document.getElementById('show-more-btn');
+    const hiddenItems = document.querySelectorAll('.hidden-item');
+    let isShowingAll = false;
+    
+    showMoreBtn.addEventListener('click', function() {
+      if (!isShowingAll) {
+        // Show all hidden items
+        hiddenItems.forEach(item => {
+          item.style.display = 'block';
+        });
+        showMoreBtn.textContent = 'VOIR MOINS';
+        isShowingAll = true;
+      } else {
+        // Hide items again
+        hiddenItems.forEach(item => {
+          item.style.display = 'none';
+        });
+        showMoreBtn.textContent = 'VOIR PLUS';
+        isShowingAll = false;
+        
+        // Scroll back to portfolio section
+        document.getElementById('portfolio').scrollIntoView({behavior: 'smooth'});
+      }
+    });
+  });
+</script>
+
+
+</body>
+</html>
