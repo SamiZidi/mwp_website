@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# Empêcher l'indexation des pages administratives
+Disallow: /admin/
+Disallow: /wp-admin/
+Disallow: /login/
+
+# Sitemap
+Sitemap: https://www.masmoudiweddingplanner.com/sitemap.xml

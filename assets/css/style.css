@@ -1,0 +1,216 @@
+
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap');
+        
+        body {
+          font-family: 'Montserrat', sans-serif;
+          color: #333;
+          background-color: #fcfaf7;
+        }
+        
+        .service-title {
+          font-family: 'Cormorant Garamond', serif;
+          font-weight: 600;
+          color: #2c2c2c;
+          margin-bottom: 1.5rem;
+          position: relative;
+          display: inline-block;
+        }
+        
+        .service-title:after {
+          content: "";
+          position: absolute;
+          bottom: -10px;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 60px;
+          height: 2px;
+          background-color: #d4b78f;
+          transition: width 0.3s ease;
+        }
+        
+        .service-card {
+          border-radius: 8px;
+          overflow: hidden;
+          transition: all 0.4s ease;
+          border: none;
+          height: 100%;
+        }
+        
+        .service-card:hover {
+          transform: translateY(-10px);
+          box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .service-card .card-body {
+          padding: 2.5rem;
+        }
+        
+        .service-icon {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          width: 90px;
+          height: 90px;
+          border-radius: 50%;
+          background-color: rgba(212, 183, 143, 0.1);
+          margin-bottom: 1.5rem;
+          transition: all 0.3s ease;
+        }
+        
+        .service-card:hover .service-icon {
+          background-color: rgba(212, 183, 143, 0.2);
+          transform: scale(1.1);
+        }
+        
+        .feature-list {
+          list-style: none;
+          padding-left: 0;
+          margin-bottom: 2rem;
+        }
+        
+        .feature-list li {
+          position: relative;
+          padding-left: 1.8rem;
+          margin-bottom: 0.75rem;
+          font-size: 0.95rem;
+          color: #555;
+        }
+        
+        .feature-list li:before {
+          content: "\f00c";
+          font-family: "Font Awesome 5 Free";
+          font-weight: 900;
+          position: absolute;
+          left: 0;
+          top: 2px;
+          color: #d4b78f;
+          font-size: 0.85rem;
+        }
+        
+        .premium-btn {
+          background-color: transparent;
+          color: #d4b78f;
+          border: 1px solid #d4b78f;
+          border-radius: 30px;
+          padding: 0.75rem 2rem;
+          font-size: 0.9rem;
+          font-weight: 500;
+          letter-spacing: 1px;
+          text-transform: uppercase;
+          transition: all 0.3s ease;
+          position: relative;
+          overflow: hidden;
+          z-index: 1;
+        }
+        
+        .premium-btn:before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: -100%;
+          width: 100%;
+          height: 100%;
+          background-color: #d4b78f00;
+          transition: all 0.4s ease-in-out;
+          z-index: -1;
+        }
+        
+        .premium-btn:hover {
+          color: white;
+        }
+        
+        .premium-btn:hover:before {
+          left: 0;
+        }
+        
+        .service-card:hover .premium-btn {
+          box-shadow: 0 5px 15px rgba(212, 183, 143, 0.4);
+        }
+        
+        .accent-text {
+          color: #d4b78f;
+          font-weight: 500;
+          letter-spacing: 2px;
+          text-transform: uppercase;
+          font-size: 0.9rem;
+        }
+        
+        .main-heading {
+          font-family: 'Cormorant Garamond', serif;
+          font-weight: 500;
+          font-size: 3rem;
+          margin-bottom: 1.5rem;
+          position: relative;
+          display: inline-block;
+        }
+        
+        .main-heading:after {
+          content: "";
+          position: absolute;
+          bottom: -15px;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 80px;
+          height: 2px;
+          background-color: #d4b78f;
+        }
+        
+        .service-divider {
+          width: 40px;
+          height: 2px;
+          background-color: #d4b78f;
+          margin: 2rem auto;
+        }
+        
+        .section-description {
+          max-width: 700px;
+          margin: 0 auto 3rem;
+          font-size: 1.1rem;
+          line-height: 1.8;
+          color: #666;
+        }
+        
+        .price-tag {
+          display: inline-block;
+          padding: 0.5rem 1.5rem;
+          background-color: rgba(212, 183, 143, 0.1);
+          border-radius: 20px;
+          font-weight: 600;
+          color: #94815d;
+          margin: 1rem 0 1.5rem;
+          border: 1px dashed rgba(212, 183, 143, 0.5);
+        }
+        
+        .expanded-info {
+          max-height: 0;
+          overflow: hidden;
+          transition: max-height 0.5s ease-out;
+        }
+        
+        .expand-toggle {
+          background: none;
+          border: none;
+          color: #d4b78f;
+          font-weight: 500;
+          margin-top: 1rem;
+          cursor: pointer;
+          font-size: 0.9rem;
+          padding: 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        
+        .expand-toggle i {
+          margin-left: 5px;
+          transition: transform 0.3s ease;
+        }
+        
+        .expanded .expanded-info {
+          max-height: 1000px;
+        }
+        
+        .expanded .expand-toggle i {
+          transform: rotate(180deg);
+        }
+    

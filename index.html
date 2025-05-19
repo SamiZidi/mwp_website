@@ -1,231 +1,136 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Masmoudi wedding planner | Wedding Planning Services</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>Masmoudi Wedding Planner | Organisation de Mariages de Luxe en Tunisie</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Masmoudi Wedding Planner transforme votre vision en célébrations de mariage inoubliables à Sfax et partout en Tunisie. Service de planification complète, partielle et coordination jour J.">
+    <meta name="keywords" content="wedding planner, organisation mariage, planificateur de mariage, mariage sfax, mariage tunisie, coordination jour j, décoration mariage">
+    <meta name="author" content="Masmoudi Wedding Planner">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.masmoudiweddingplanner.com/">
+    <meta property="og:title" content="Masmoudi Wedding Planner | Organisation de Mariages en Tunisie">
+    <meta property="og:description" content="Service complet de planification et d'organisation de mariages à Sfax et dans toute la Tunisie. Créez le mariage de vos rêves avec notre équipe d'experts.">
+    <meta property="og:image" content="https://www.masmoudiweddingplanner.com/assets/img/og-image.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.masmoudiweddingplanner.com/">
+    <meta property="twitter:title" content="Masmoudi Wedding Planner | Mariages de Luxe en Tunisie">
+    <meta property="twitter:description" content="Organisation de mariages sur mesure, décoration et coordination complète pour votre mariage parfait en Tunisie.">
+    <meta property="twitter:image" content="https://www.masmoudiweddingplanner.com/assets/img/twitter-image.jpg">
+    
+    <!-- Canonical URL -->
+    <meta rel="canonical" href="https://www.masmoudiweddingplanner.com/">
+    
+    <!-- Existing CSS Links -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap');
-        
-        body {
-          font-family: 'Montserrat', sans-serif;
-          color: #333;
-          background-color: #fcfaf7;
-        }
-        
-        .service-title {
-          font-family: 'Cormorant Garamond', serif;
-          font-weight: 600;
-          color: #2c2c2c;
-          margin-bottom: 1.5rem;
-          position: relative;
-          display: inline-block;
-        }
-        
-        .service-title:after {
-          content: "";
-          position: absolute;
-          bottom: -10px;
-          left: 50%;
-          transform: translateX(-50%);
-          width: 60px;
-          height: 2px;
-          background-color: #d4b78f;
-          transition: width 0.3s ease;
-        }
-        
-        .service-card {
-          border-radius: 8px;
-          overflow: hidden;
-          transition: all 0.4s ease;
-          border: none;
-          height: 100%;
-        }
-        
-        .service-card:hover {
-          transform: translateY(-10px);
-          box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-        }
-        
-        .service-card .card-body {
-          padding: 2.5rem;
-        }
-        
-        .service-icon {
-          display: inline-flex;
-          align-items: center;
-          justify-content: center;
-          width: 90px;
-          height: 90px;
-          border-radius: 50%;
-          background-color: rgba(212, 183, 143, 0.1);
-          margin-bottom: 1.5rem;
-          transition: all 0.3s ease;
-        }
-        
-        .service-card:hover .service-icon {
-          background-color: rgba(212, 183, 143, 0.2);
-          transform: scale(1.1);
-        }
-        
-        .feature-list {
-          list-style: none;
-          padding-left: 0;
-          margin-bottom: 2rem;
-        }
-        
-        .feature-list li {
-          position: relative;
-          padding-left: 1.8rem;
-          margin-bottom: 0.75rem;
-          font-size: 0.95rem;
-          color: #555;
-        }
-        
-        .feature-list li:before {
-          content: "\f00c";
-          font-family: "Font Awesome 5 Free";
-          font-weight: 900;
-          position: absolute;
-          left: 0;
-          top: 2px;
-          color: #d4b78f;
-          font-size: 0.85rem;
-        }
-        
-        .premium-btn {
-          background-color: transparent;
-          color: #d4b78f;
-          border: 1px solid #d4b78f;
-          border-radius: 30px;
-          padding: 0.75rem 2rem;
-          font-size: 0.9rem;
-          font-weight: 500;
-          letter-spacing: 1px;
-          text-transform: uppercase;
-          transition: all 0.3s ease;
-          position: relative;
-          overflow: hidden;
-          z-index: 1;
-        }
-        
-        .premium-btn:before {
-          content: "";
-          position: absolute;
-          top: 0;
-          left: -100%;
-          width: 100%;
-          height: 100%;
-          background-color: #d4b78f00;
-          transition: all 0.4s ease-in-out;
-          z-index: -1;
-        }
-        
-        .premium-btn:hover {
-          color: white;
-        }
-        
-        .premium-btn:hover:before {
-          left: 0;
-        }
-        
-        .service-card:hover .premium-btn {
-          box-shadow: 0 5px 15px rgba(212, 183, 143, 0.4);
-        }
-        
-        .accent-text {
-          color: #d4b78f;
-          font-weight: 500;
-          letter-spacing: 2px;
-          text-transform: uppercase;
-          font-size: 0.9rem;
-        }
-        
-        .main-heading {
-          font-family: 'Cormorant Garamond', serif;
-          font-weight: 500;
-          font-size: 3rem;
-          margin-bottom: 1.5rem;
-          position: relative;
-          display: inline-block;
-        }
-        
-        .main-heading:after {
-          content: "";
-          position: absolute;
-          bottom: -15px;
-          left: 50%;
-          transform: translateX(-50%);
-          width: 80px;
-          height: 2px;
-          background-color: #d4b78f;
-        }
-        
-        .service-divider {
-          width: 40px;
-          height: 2px;
-          background-color: #d4b78f;
-          margin: 2rem auto;
-        }
-        
-        .section-description {
-          max-width: 700px;
-          margin: 0 auto 3rem;
-          font-size: 1.1rem;
-          line-height: 1.8;
-          color: #666;
-        }
-        
-        .price-tag {
-          display: inline-block;
-          padding: 0.5rem 1.5rem;
-          background-color: rgba(212, 183, 143, 0.1);
-          border-radius: 20px;
-          font-weight: 600;
-          color: #94815d;
-          margin: 1rem 0 1.5rem;
-          border: 1px dashed rgba(212, 183, 143, 0.5);
-        }
-        
-        .expanded-info {
-          max-height: 0;
-          overflow: hidden;
-          transition: max-height 0.5s ease-out;
-        }
-        
-        .expand-toggle {
-          background: none;
-          border: none;
-          color: #d4b78f;
-          font-weight: 500;
-          margin-top: 1rem;
-          cursor: pointer;
-          font-size: 0.9rem;
-          padding: 0;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-        }
-        
-        .expand-toggle i {
-          margin-left: 5px;
-          transition: transform 0.3s ease;
-        }
-        
-        .expanded .expanded-info {
-          max-height: 1000px;
-        }
-        
-        .expanded .expand-toggle i {
-          transform: rotate(180deg);
-        }
-      </style>
+    <link href="assets/css/style.css" rel="stylesheet">
+    
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WeddingPlanningService",
+  "name": "Masmoudi Wedding Planner",
+  "image": "/assets/img/logo.jpg",
+  "url": "https://www.masmoudiweddingplanner.com",
+  "telephone": "+21623022022",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Route Tanyour km 2",
+    "addressLocality": "Sfax",
+    "postalCode": "3001",
+    "addressCountry": "TN"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 34.7406,
+    "longitude": 10.7603
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday"
+    ],
+    "opens": "09:00",
+    "closes": "18:00"
+  },
+  "sameAs": [
+    "https://www.facebook.com/p/Masmoudi-wedding-planner-%D8%A7%D9%84%D9%85%D8%B5%D9%85%D9%88%D8%AF%D9%8A-%D9%84%D8%AA%D9%86%D8%B8%D9%8A%D9%85-%D8%A7%D9%81%D8%B1%D8%A7%D8%AD%D9%83%D9%85-100064334725761/",
+    "https://www.instagram.com/masmoudi_wedding_planner/"
+  ],
+  "priceRange": "€€-€€€€",
+  "description": "Masmoudi Wedding Planner est une entreprise spécialisée dans l'organisation et la planification de mariages à Sfax et dans toute la Tunisie. Nous offrons des services de planification complète, partielle, et coordination jour J pour créer votre mariage de rêve parfaitement personnalisé.",
+  "areaServed": ["Sfax", "Tunis", "Sousse", "Hammamet", "Djerba", "Tunisie"],
+  "offers": [
+    {
+      "@type": "Offer",
+      "name": "Planification Complète",
+      "description": "Une expérience luxueuse de A à Z où chaque détail est méticuleusement orchestré pour créer votre événement de rêve sans stress."
+    },
+    {
+      "@type": "Offer",
+      "name": "Planification Partielle",
+      "description": "L'expertise professionnelle dont vous avez besoin pour parfaire votre vision et sublimer les détails de votre mariage."
+    },
+    {
+      "@type": "Offer",
+      "name": "Coordination Jour J",
+      "description": "Déléguez l'orchestration de votre grand jour à nos experts pour vivre pleinement chaque moment mémorable."
+    }
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Services de Mariage",
+    "itemListElement": [
+      {
+        "@type": "OfferCatalog",
+        "name": "Planification de Mariage",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Planification Complète"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Planification Partielle"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Coordination Jour J"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
+    </script>
 </head>
+
 <body class="bg-light">
+
     <!-- Navigation -->
 <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
     <div class="container">
@@ -844,83 +749,7 @@
 
 <!-- Bootstrap JS -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
-
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    // Animation on scroll
-    const observerOptions = {
-      threshold: 0.1
-    };
-    
-    const observer = new IntersectionObserver(function(entries) {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const delay = entry.target.getAttribute('style') ? 
-                        parseFloat(entry.target.getAttribute('style').replace('animation-delay: ', '').replace('s;', '')) : 0;
-          
-          setTimeout(() => {
-            entry.target.classList.add('animate__animated', 'animate__fadeInUp');
-          }, delay * 1000);
-        }
-      });
-    }, observerOptions);
-    
-    document.querySelectorAll('.service-card').forEach(item => {
-      observer.observe(item);
-    });
-    
-    // Expand/collapse functionality
-    document.querySelectorAll('.expand-toggle').forEach(button => {
-      button.addEventListener('click', function() {
-        const cardBody = this.closest('.card-body');
-        cardBody.classList.toggle('expanded');
-        
-        const text = cardBody.classList.contains('expanded') ? 'Voir moins' : 'Découvrir plus';
-        this.innerHTML = text + ' <i class="fas fa-chevron-' + (cardBody.classList.contains('expanded') ? 'up' : 'down') + '"></i>';
-      });
-    });
-
-    // Hover effects
-    document.querySelectorAll('.service-card').forEach(card => {
-      card.addEventListener('mouseenter', function() {
-        this.querySelector('.service-icon').style.transform = 'scale(1.1)';
-      });
-      
-      card.addEventListener('mouseleave', function() {
-        this.querySelector('.service-icon').style.transform = 'scale(1)';
-      });
-    });
-  });
-</script>
-<!-- JavaScript for Show More Functionality -->
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    const showMoreBtn = document.getElementById('show-more-btn');
-    const hiddenItems = document.querySelectorAll('.hidden-item');
-    let isShowingAll = false;
-    
-    showMoreBtn.addEventListener('click', function() {
-      if (!isShowingAll) {
-        // Show all hidden items
-        hiddenItems.forEach(item => {
-          item.style.display = 'block';
-        });
-        showMoreBtn.textContent = 'VOIR MOINS';
-        isShowingAll = true;
-      } else {
-        // Hide items again
-        hiddenItems.forEach(item => {
-          item.style.display = 'none';
-        });
-        showMoreBtn.textContent = 'VOIR PLUS';
-        isShowingAll = false;
-        
-        // Scroll back to portfolio section
-        document.getElementById('portfolio').scrollIntoView({behavior: 'smooth'});
-      }
-    });
-  });
-</script>
+<script src="assets/js/main.js"></script>
 
 
 </body>
