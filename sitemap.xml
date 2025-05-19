@@ -1,10 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
   <url>
     <loc>https://www.masmoudiweddingplanner.com/</loc>
     <lastmod>2025-05-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <video:video>
+      <video:thumbnail_loc>https://www.masmoudiweddingplanner.com/assets/img/1744880366983.jpg</video:thumbnail_loc>
+      <video:title>Présentation Masmoudi Wedding Planner</video:title>
+      <video:description>Vidéo de présentation de Masmoudi Wedding Planner, service d'organisation de mariages de luxe en Tunisie.</video:description>
+      <video:content_loc>https://www.masmoudiweddingplanner.com/assets/videos/Untitled video - Made with Clipchamp.mp4</video:content_loc>
+      <video:duration>45</video:duration>
+      <video:family_friendly>yes</video:family_friendly>
+      <video:publication_date>2025-01-15</video:publication_date>
+    </video:video>
   </url>
   <url>
     <loc>https://www.masmoudiweddingplanner.com/#services</loc>
@@ -17,6 +27,126 @@
     <lastmod>2025-05-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <video:video>
+      <video:thumbnail_loc>https://www.masmoudiweddingplanner.com/assets/portfolio/thumbnail1.jpg</video:thumbnail_loc>
+      <video:title>Mariage Collection 1</video:title>
+      <video:description>Décorations et arrangements floraux pour un mariage de luxe organisé par Masmoudi Wedding Planner.</video:description>
+      <video:content_loc>https://www.masmoudiweddingplanner.com/assets/portfolio/1.mp4</video:content_loc>
+      <video:family_friendly>yes</video:family_friendly>
+      <video:publication_date>2024-12-10</video:publication_date>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://www.masmoudiweddingplanner.com/assets/portfolio/thumbnail2.jpg</video:thumbnail_loc>
+      <video:title>Mariage Collection 2</video:title>
+      <video:description>Organisation et décoration d'un mariage élégant en Tunisie.</video:description>
+      <video:content_loc>https://www.masmoudiweddingplanner.com/assets/portfolio/2.mp4</video:content_loc>
+      <video:family_friendly>yes</video:family_friendly>
+      <video:publication_date>2024-12-15</video:publication_date>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://www.masmoudiweddingplanner.com/assets/portfolio/thumbnail3.jpg</video:thumbnail_loc>
+      <video:title>Mariage Collection 3</video:title>
+      <video:description>Célébration de mariage organisée par Masmoudi Wedding Planner à Sfax.</video:description>
+      <video:content_loc>https://www.masmoudiweddingplanner.com/assets/portfolio/3.mp4</video:content_loc>
+      <video:family_friendly>yes</video:family_friendly>
+      <video:publication_date>2024-12-20</video:publication_date>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://www.masmoudiweddingplanner.com/assets/portfolio/thumbnail4.jpg</video:thumbnail_loc>
+      <video:title>Mariage Collection 4</video:title>
+      <video:description>Organisation d'un mariage thématique par Masmoudi Wedding Planner.</video:description>
+      <video:content_loc>https://www.masmoudiweddingplanner.com/assets/portfolio/4.mp4</video:content_loc>
+      <video:family_friendly>yes</video:family_friendly>
+      <video:publication_date>2025-01-05</video:publication_date>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://www.masmoudiweddingplanner.com/assets/portfolio/thumbnail5.jpg</video:thumbnail_loc>
+      <video:title>Mariage Collection 5</video:title>
+      <video:description>Décoration et coordination d'un mariage de luxe en Tunisie.</video:description>
+      <video:content_loc>https://www.masmoudiweddingplanner.com/assets/portfolio/5.mp4</video:content_loc>
+      <video:family_friendly>yes</video:family_friendly>
+      <video:publication_date>2025-01-10</video:publication_date>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://www.masmoudiweddingplanner.com/assets/portfolio/thumbnail6.jpg</video:thumbnail_loc>
+      <video:title>Mariage Collection 6</video:title>
+      <video:description>Planification complète d'un mariage à Sfax par Masmoudi Wedding Planner.</video:description>
+      <video:content_loc>https://www.masmoudiweddingplanner.com/assets/portfolio/6.mp4</video:content_loc>
+      <video:family_friendly>yes</video:family_friendly>
+      <video:publication_date>2025-01-15</video:publication_date>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://www.masmoudiweddingplanner.com/assets/portfolio/thumbnail7.jpg</video:thumbnail_loc>
+      <video:title>Mariage Collection 7</video:title>
+      <video:description>Organisation d'une réception de mariage élégante.</video:description>
+      <video:content_loc>https://www.masmoudiweddingplanner.com/assets/portfolio/7.mp4</video:content_loc>
+      <video:family_friendly>yes</video:family_friendly>
+      <video:publication_date>2025-01-20</video:publication_date>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://www.masmoudiweddingplanner.com/assets/portfolio/thumbnail8.jpg</video:thumbnail_loc>
+      <video:title>Mariage Collection 8</video:title>
+      <video:description>Organisation d'un mariage de luxe par Masmoudi Wedding Planner.</video:description>
+      <video:content_loc>https://www.masmoudiweddingplanner.com/assets/portfolio/8.mp4</video:content_loc>
+      <video:family_friendly>yes</video:family_friendly>
+      <video:publication_date>2025-01-25</video:publication_date>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://www.masmoudiweddingplanner.com/assets/portfolio/thumbnail9.jpg</video:thumbnail_loc>
+      <video:title>Mariage Collection 9</video:title>
+      <video:description>Organisation et décoration d'un mariage en Tunisie.</video:description>
+      <video:content_loc>https://www.masmoudiweddingplanner.com/assets/portfolio/9.mp4</video:content_loc>
+      <video:family_friendly>yes</video:family_friendly>
+      <video:publication_date>2025-01-30</video:publication_date>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://www.masmoudiweddingplanner.com/assets/portfolio/thumbnail10.jpg</video:thumbnail_loc>
+      <video:title>Mariage Collection 10</video:title>
+      <video:description>Planification et organisation d'un mariage de luxe à Sfax.</video:description>
+      <video:content_loc>https://www.masmoudiweddingplanner.com/assets/portfolio/10.mp4</video:content_loc>
+      <video:family_friendly>yes</video:family_friendly>
+      <video:publication_date>2025-02-05</video:publication_date>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://www.masmoudiweddingplanner.com/assets/portfolio/thumbnail11.jpg</video:thumbnail_loc>
+      <video:title>Mariage Collection 11</video:title>
+      <video:description>Organisation d'un mariage sur le thème élégant par Masmoudi Wedding Planner.</video:description>
+      <video:content_loc>https://www.masmoudiweddingplanner.com/assets/portfolio/11.mp4</video:content_loc>
+      <video:family_friendly>yes</video:family_friendly>
+      <video:publication_date>2025-02-10</video:publication_date>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://www.masmoudiweddingplanner.com/assets/portfolio/thumbnail12.jpg</video:thumbnail_loc>
+      <video:title>Mariage Collection 12</video:title>
+      <video:description>Planification et décoration d'un mariage luxueux à Tunis.</video:description>
+      <video:content_loc>https://www.masmoudiweddingplanner.com/assets/portfolio/12.mp4</video:content_loc>
+      <video:family_friendly>yes</video:family_friendly>
+      <video:publication_date>2025-02-15</video:publication_date>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://www.masmoudiweddingplanner.com/assets/portfolio/thumbnail13.jpg</video:thumbnail_loc>
+      <video:title>Mariage Collection 13</video:title>
+      <video:description>Organisation d'un mariage thématique par Masmoudi Wedding Planner.</video:description>
+      <video:content_loc>https://www.masmoudiweddingplanner.com/assets/portfolio/13.mp4</video:content_loc>
+      <video:family_friendly>yes</video:family_friendly>
+      <video:publication_date>2025-02-20</video:publication_date>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://www.masmoudiweddingplanner.com/assets/portfolio/thumbnail14.jpg</video:thumbnail_loc>
+      <video:title>Mariage Collection 14</video:title>
+      <video:description>Organisation d'un mariage élégant par Masmoudi Wedding Planner.</video:description>
+      <video:content_loc>https://www.masmoudiweddingplanner.com/assets/portfolio/14.mp4</video:content_loc>
+      <video:family_friendly>yes</video:family_friendly>
+      <video:publication_date>2025-02-25</video:publication_date>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://www.masmoudiweddingplanner.com/assets/portfolio/thumbnail15.jpg</video:thumbnail_loc>
+      <video:title>Mariage Collection 15</video:title>
+      <video:description>Organisation et décoration d'un mariage de luxe en Tunisie.</video:description>
+      <video:content_loc>https://www.masmoudiweddingplanner.com/assets/portfolio/15.mp4</video:content_loc>
+      <video:family_friendly>yes</video:family_friendly>
+      <video:publication_date>2025-03-01</video:publication_date>
+    </video:video>
   </url>
   <url>
     <loc>https://www.masmoudiweddingplanner.com/#testimonials</loc>
@@ -29,6 +159,15 @@
     <lastmod>2025-05-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <video:video>
+      <video:thumbnail_loc>https://www.masmoudiweddingplanner.com/assets/videos/about-thumbnail.jpg</video:thumbnail_loc>
+      <video:title>À propos de Masmoudi Wedding Planner</video:title>
+      <video:description>Présentation de l'équipe et de l'histoire de Masmoudi Wedding Planner, spécialiste de l'organisation de mariages en Tunisie.</video:description>
+      <video:content_loc>https://www.masmoudiweddingplanner.com/assets/videos/Untitled video - Made with Clipchamp.mp4</video:content_loc>
+      <video:duration>60</video:duration>
+      <video:family_friendly>yes</video:family_friendly>
+      <video:publication_date>2025-01-15</video:publication_date>
+    </video:video>
   </url>
   <url>
     <loc>https://www.masmoudiweddingplanner.com/#contact</loc>
@@ -36,6 +175,4 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
- 
-  <!-- Ajoutez toutes vos autres pages ici -->
 </urlset>
