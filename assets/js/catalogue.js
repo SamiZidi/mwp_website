@@ -4,7 +4,7 @@
    ========================================================================== */
 
 /* IMPORTANT : remplacez par l'URL publique de votre application admin */
-const CATALOGUE_API = "https://REPLACE-WITH-ADMIN-URL";
+const CATALOGUE_API = "https://admin.masmoudiweddingplanner.com";
 
 (function () {
   const root = document.getElementById('catalogue-app');
@@ -90,7 +90,7 @@ const CATALOGUE_API = "https://REPLACE-WITH-ADMIN-URL";
     return `<div class="row g-3">` + data.stars.map(s => `
       <div class="col-6 col-sm-4 col-lg-3 col-xl-2-4">
         <div class="catalogue-star-card" data-item="stars:${s.id}">
-          ${mediaEl(s.media && s.media[0], { alt: s.name })}
+          ${mediaEl(s.thumb || (s.media && s.media[0]), { alt: s.name })}
           <div class="csc-overlay"></div>
           <div class="csc-info">
             <h3>${esc(s.name)}</h3>
@@ -105,7 +105,7 @@ const CATALOGUE_API = "https://REPLACE-WITH-ADMIN-URL";
     return `<div class="row g-4">` + items.map((d, idx) => `
       <div class="${idx === 0 || idx === 3 ? 'col-md-8' : 'col-md-4'}">
         <div class="catalogue-tile">
-          ${mediaEl(d.media && d.media[0], { alt: d.title })}
+          ${mediaEl(d.thumb || (d.media && d.media[0]), { alt: d.title })}
           <div class="ct-overlay"></div>
           <div class="ct-info">
             <h3>${esc(d.title)}</h3>
