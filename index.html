@@ -130,6 +130,7 @@
   }
 }
     </script>
+    <link rel="stylesheet" href="assets/css/catalogue.css">
 </head>
 
 <body class="bg-light">
@@ -146,7 +147,7 @@
         <ul class="navbar-nav ms-auto" style="font-family: 'Montserrat', sans-serif; font-weight: 400; letter-spacing: 1px;">
           <li class="nav-item mx-2"><a class="nav-link" href="#home">Accueil</a></li>
           <li class="nav-item mx-2"><a class="nav-link" href="#services">Services</a></li>
-          <li class="nav-item mx-2"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+          <li class="nav-item mx-2"><a class="nav-link" href="#portfolio">Catalogue</a></li>
           <li class="nav-item mx-2"><a class="nav-link" href="#testimonials">Témoignages</a></li>
           <li class="nav-item mx-2"><a class="nav-link" href="#about">À propos</a></li>
           <li class="nav-item mx-2"><a class="nav-link" href="#contact">Contact</a></li>
@@ -362,240 +363,25 @@
   </section>
   
 
-<!-- Portfolio Section -->
+<!-- Catalogue Section (contenu géré depuis l'application admin) -->
 <section id="portfolio" class="py-5 bg-white">
   <div class="container py-5">
     <div class="row mb-5 text-center">
       <div class="col-lg-12">
-        <h6 style="color: #d4b78f; font-family: 'Montserrat', sans-serif; letter-spacing: 2px; font-weight: 500;">NOS RÉALISATIONS</h6>
-        <h2 class="display-5 mb-4" style="font-family: 'Cormorant Garamond', serif; font-weight: 500;">Portfolio Mariage</h2>
-        <p class="lead mx-auto" style="max-width: 700px; font-family: 'Montserrat', sans-serif;">Chaque mariage raconte une histoire unique. Parcourez notre portfolio pour découvrir les magnifiques célébrations que nous avons eu le plaisir d'organiser.</p>
+        <h6 style="color: #d4b78f; font-family: 'Montserrat', sans-serif; letter-spacing: 2px; font-weight: 500;">NOTRE CATALOGUE EXCLUSIF</h6>
+        <h2 class="display-5 mb-4" style="font-family: 'Cormorant Garamond', serif; font-weight: 500;">Artistes, Décorations &amp; Services</h2>
+        <p class="lead mx-auto" style="max-width: 700px; font-family: 'Montserrat', sans-serif;">Découvrez la magie que nous apportons à votre jour J. Parcourez notre sélection rigoureuse d'artistes de premier plan, de décorations époustouflantes et de services haut de gamme.</p>
       </div>
     </div>
 
-    <div class="row g-4" id="portfolio-container">
-      <!-- Item 1 -->
-      <div class="col-md-4 portfolio-item">
-        <div class="card border-0 overflow-hidden">
-          <video controls>
-            <source src="assets/portfolio/1.mp4" type="video/mp4">
-            Votre navigateur ne supporte pas la lecture de vidéos.
-          </video>
-          
-        </div>
+    <div id="catalogue-app">
+      <div class="text-center py-5">
+        <div class="spinner-border" style="color: #d4b78f;" role="status"></div>
       </div>
-
-      <!-- Item 2 -->
-      <div class="col-md-4 portfolio-item">
-        <div class="card border-0 overflow-hidden">
-          <video controls>
-            <source src="assets/portfolio/2.mp4" type="video/mp4">
-            Votre navigateur ne supporte pas la lecture de vidéos.
-          </video>
-         
-        </div>
-      </div>
-
-      <!-- Item 3 -->
-      <div class="col-md-4 portfolio-item">
-        <div class="card border-0 overflow-hidden">
-          <video controls>
-            <source src="assets/portfolio/3.mp4" type="video/mp4">
-            Votre navigateur ne supporte pas la lecture de vidéos.
-          </video>
-          
-        </div>
-      </div>
-
-      <!-- Item 4 -->
-      <div class="col-md-4 portfolio-item">
-        <div class="card border-0 overflow-hidden">
-          <img src="/assets/portfolio/img1.JPG" class="card-img-top" alt="Mariage Champêtre">
-          
-        </div>
-      </div>
-
-      <!-- Item 5 -->
-      <div class="col-md-4 portfolio-item">
-        <div class="card border-0 overflow-hidden">
-          <img src="/assets/portfolio/img2.JPG" class="card-img-top" alt="Mariage Plage">
-         
-        </div>
-      </div>
-
-      <!-- Item 6 -->
-      <div class="col-md-4 portfolio-item">
-        <div class="card border-0 overflow-hidden">
-          <img src="/assets/portfolio/img3.JPG" class="card-img-top" alt="Mariage Classique">
-         
-        </div>
-      </div>
-
-      <!-- Item 7 (Hidden initially) -->
-      <div class="col-md-4 portfolio-item hidden-item" style="display: none;">
-        <div class="card border-0 overflow-hidden">
-          <img src="/assets/portfolio/img4.JPG" class="card-img-top" alt="Mariage Romantique">
-          
-        </div>
-      </div>
-
-      <!-- Item 8 (Hidden initially) -->
-      <div class="col-md-4 portfolio-item hidden-item" style="display: none;">
-        <div class="card border-0 overflow-hidden">
-          <video controls>
-            <source src="assets/portfolio/4.mp4" type="video/mp4">
-            Votre navigateur ne supporte pas la lecture de vidéos.
-          </video>
-          
-        </div>
-      </div>
-
-      <!-- Item 9 (Hidden initially) -->
-      <div class="col-md-4 portfolio-item hidden-item" style="display: none;">
-        <div class="card border-0 overflow-hidden">
-          <video controls>
-            <source src="assets/portfolio/5.mp4" type="video/mp4">
-            Votre navigateur ne supporte pas la lecture de vidéos.
-          </video>
-         
-        </div>
-      </div>
-
-      <!-- Item 10 (Hidden initially) -->
-      <div class="col-md-4 portfolio-item hidden-item" style="display: none;">
-        <div class="card border-0 overflow-hidden">
-          <img src="/assets/portfolio/img7.JPG" class="card-img-top" alt="Mariage Château">
-          
-        </div>
-      </div>
-
-      <!-- Item 11 (Hidden initially) -->
-      <div class="col-md-4 portfolio-item hidden-item" style="display: none;">
-        <div class="card border-0 overflow-hidden">
-          <video controls>
-            <source src="assets/portfolio/6.mp4" type="video/mp4">
-            Votre navigateur ne supporte pas la lecture de vidéos.
-          </video>
-          
-        </div>
-      </div>
-
-      <!-- Item 12 (Hidden initially) -->
-      <div class="col-md-4 portfolio-item hidden-item" style="display: none;">
-        <div class="card border-0 overflow-hidden">
-          <video controls>
-            <source src="assets/portfolio/7.mp4" type="video/mp4">
-            Votre navigateur ne supporte pas la lecture de vidéos.
-          </video>
-         
-        </div>
-      </div>
-
-      <!-- Item 13 (Hidden initially) -->
-      <div class="col-md-4 portfolio-item hidden-item" style="display: none;">
-        <div class="card border-0 overflow-hidden">
-          <video controls>
-            <source src="assets/portfolio/8.mp4" type="video/mp4">
-            Votre navigateur ne supporte pas la lecture de vidéos.
-          </video>
-          
-        </div>
-      </div>
-
-      <!-- Item 14 (Hidden initially) -->
-      <div class="col-md-4 portfolio-item hidden-item" style="display: none;">
-        <div class="card border-0 overflow-hidden">
-          <video controls>
-            <source src="assets/portfolio/9.mp4" type="video/mp4">
-            Votre navigateur ne supporte pas la lecture de vidéos.
-          </video>
-          
-        </div>
-      </div>
-
-      <!-- Item 15 (Hidden initially) -->
-      <div class="col-md-4 portfolio-item hidden-item" style="display: none;">
-        <div class="card border-0 overflow-hidden">
-          <video controls>
-            <source src="assets/portfolio/10.mp4" type="video/mp4">
-            Votre navigateur ne supporte pas la lecture de vidéos.
-          </video>
-         
-        </div>
-      </div>
-
-      <!-- Item 16 (Hidden initially) -->
-      <div class="col-md-4 portfolio-item hidden-item" style="display: none;">
-        <div class="card border-0 overflow-hidden">
-          <video controls>
-            <source src="assets/portfolio/11.mp4" type="video/mp4">
-            Votre navigateur ne supporte pas la lecture de vidéos.
-          </video>
-        </div>
-      </div>
-
-      <!-- Item 17 (Hidden initially) -->
-      <div class="col-md-4 portfolio-item hidden-item" style="display: none;">
-        <div class="card border-0 overflow-hidden">
-          <video controls>
-            <source src="assets/portfolio/12.mp4" type="video/mp4">
-            Votre navigateur ne supporte pas la lecture de vidéos.
-          </video>
-          
-        </div>
-      </div>
-
-      <!-- Item 18 (Hidden initially) -->
-      <div class="col-md-4 portfolio-item hidden-item" style="display: none;">
-        <div class="card border-0 overflow-hidden">
-          <video controls>
-            <source src="assets/portfolio/13.mp4" type="video/mp4">
-            Votre navigateur ne supporte pas la lecture de vidéos.
-          </video>
-         
-        </div>
-      </div>
-
-      <!-- Item 19 (Hidden initially) -->
-      <div class="col-md-4 portfolio-item hidden-item" style="display: none;">
-        <div class="card border-0 overflow-hidden">
-          <img src="/assets/portfolio/img8.JPG" class="card-img-top" alt="Mariage Glamour">
-         
-        </div>
-      </div>
-
-      <!-- Item 20 (Hidden initially) -->
-      <div class="col-md-4 portfolio-item hidden-item" style="display: none;">
-        <div class="card border-0 overflow-hidden">
-          <video controls>
-            <source src="assets/portfolio/14.mp4" type="video/mp4">
-            Votre navigateur ne supporte pas la lecture de vidéos.
-          </video>
-         
-        </div>
-      </div>
-
-      <!-- Item 21 (Hidden initially) -->
-      <div class="col-md-4 portfolio-item hidden-item" style="display: none;">
-        <div class="card border-0 overflow-hidden">
-          <video controls>
-            <source src="assets/portfolio/15.mp4" type="video/mp4">
-            Votre navigateur ne supporte pas la lecture de vidéos.
-          </video>
-          
-        </div>
-      </div>
-    </div>
-
-    <!-- Show More Button -->
-    <div class="text-center mt-5">
-      <button id="show-more-btn" class="btn btn-outline-secondary px-4 py-2" style="font-family: 'Montserrat', sans-serif; letter-spacing: 1px;">
-        VOIR PLUS
-      </button>
     </div>
   </div>
 </section>
-  
+
 
       
    <!-- Section Témoignages -->
@@ -811,6 +597,7 @@
 <!-- JavaScript pour le formulaire de contact -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/catalogue.js"></script>
 <script src="assets/js/main.js"></script>
 
 <script>

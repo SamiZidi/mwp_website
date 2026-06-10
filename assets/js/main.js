@@ -47,9 +47,10 @@
 
   document.addEventListener('DOMContentLoaded', function() {
     const showMoreBtn = document.getElementById('show-more-btn');
+    if (!showMoreBtn) return; // Section portfolio remplacée par le catalogue dynamique
     const hiddenItems = document.querySelectorAll('.hidden-item');
     let isShowingAll = false;
-    
+
     showMoreBtn.addEventListener('click', function() {
       if (!isShowingAll) {
         // Show all hidden items
