@@ -16,6 +16,18 @@ const CATALOGUE_API = "https://REPLACE-WITH-ADMIN-URL";
 
   const GOLD = '#d4b78f';
 
+  /* Un média peut être une photo ou une vidéo : on choisit la balise selon l'extension */
+  const isVideo = v => /\.(mp4|webm|mov|m4v)(\?.*)?$/i.test(v || '');
+  function mediaEl(v, opts = {}) {
+    if (!v) return '';
+    if (isVideo(v)) {
+      return opts.controls
+        ? `<video src="${esc(v)}" controls playsinline preload="metadata"></video>`
+        : `<video src="${esc(v)}" muted playsinline loop preload="metadata"></video>`;
+    }
+    return `<img src="${esc(v)}" alt="${esc(opts.alt || '')}" loading="lazy">`;
+  }
+
   /* ---------- Rendu ---------- */
 
   function render() {
@@ -61,7 +73,7 @@ const CATALOGUE_API = "https://REPLACE-WITH-ADMIN-URL";
     return `<div class="row g-4">` + data.exclusive.map(a => `
       <div class="col-12 col-sm-6 col-lg-3">
         <div class="catalogue-video-card" data-item="exclusive:${a.id}">
-          ${a.video ? `<video src="${esc(a.video)}" muted playsinline loop preload="metadata"></video>` : ''}
+          ${mediaEl(a.thumb || (a.media && a.media[0]), { alt: a.name })}
           <div class="cvc-overlay"></div>
           <div class="cvc-info">
             <div class="cvc-badge"><i class="fas fa-star"></i> EXCLUSIF</div>
@@ -78,7 +90,7 @@ const CATALOGUE_API = "https://REPLACE-WITH-ADMIN-URL";
     return `<div class="row g-3">` + data.stars.map(s => `
       <div class="col-6 col-sm-4 col-lg-3 col-xl-2-4">
         <div class="catalogue-star-card" data-item="stars:${s.id}">
-          ${s.image ? `<img src="${esc(s.image)}" alt="${esc(s.name)}" loading="lazy">` : ''}
+          ${mediaEl(s.media && s.media[0], { alt: s.name })}
           <div class="csc-overlay"></div>
           <div class="csc-info">
             <h3>${esc(s.name)}</h3>
@@ -93,7 +105,7 @@ const CATALOGUE_API = "https://REPLACE-WITH-ADMIN-URL";
     return `<div class="row g-4">` + items.map((d, idx) => `
       <div class="${idx === 0 || idx === 3 ? 'col-md-8' : 'col-md-4'}">
         <div class="catalogue-tile">
-          ${d.image ? `<img src="${esc(d.image)}" alt="${esc(d.title)}" loading="lazy">` : ''}
+          ${mediaEl(d.media && d.media[0], { alt: d.title })}
           <div class="ct-overlay"></div>
           <div class="ct-info">
             <h3>${esc(d.title)}</h3>
@@ -128,10 +140,10 @@ const CATALOGUE_API = "https://REPLACE-WITH-ADMIN-URL";
           <button class="cm-close"><i class="fas fa-times"></i></button>
         </div>
         <div class="cm-body">
-          ${!isExclusive && item.image ? `<img class="cm-img" src="${esc(item.image)}" alt="${esc(name)}">` : ''}
           <p class="cm-desc">${esc(item.description || '')}</p>
-          ${isExclusive && item.video ? `
-            <div class="cm-video"><video src="${esc(item.video)}" controls playsinline preload="metadata"></video></div>` : ''}
+          ${(item.media || []).map(v => isVideo(v)
+            ? `<div class="cm-video">${mediaEl(v, { controls: true })}</div>`
+            : `<img class="cm-img" src="${esc(v)}" alt="${esc(name)}">`).join('')}
           <div class="cm-contact">
             <h3>Réserver ${esc(name)}</h3>
             <p>Masmoudi Wedding Planner gère pour vous la disponibilité et la réservation pour votre événement.</p>
@@ -166,7 +178,7 @@ const CATALOGUE_API = "https://REPLACE-WITH-ADMIN-URL";
   }
 
   function observeVideos() {
-    const videos = root.querySelectorAll('.catalogue-video-card video');
+    const videos = root.querySelectorAll('#catalogue-content video');
     if (!videos.length) return;
     const observer = new IntersectionObserver(entries => {
       entries.forEach(e => {
