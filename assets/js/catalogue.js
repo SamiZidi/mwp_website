@@ -103,7 +103,7 @@ const CATALOGUE_API = "https://admin.masmoudiweddingplanner.com";
   function renderTiles(items) {
     if (!items || !items.length) return emptyState();
     return `<div class="row g-4">` + items.map((d, idx) => `
-      <div class="${idx === 0 || idx === 3 ? 'col-md-8' : 'col-md-4'}">
+      <div class="col-6 col-md-4 col-lg-3">
         <div class="catalogue-tile">
           ${mediaEl(d.thumb || (d.media && d.media[0]), { alt: d.title })}
           <div class="ct-overlay"></div>
