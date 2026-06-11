@@ -58,10 +58,10 @@
   background: #d4b78f;
 }
 
-/* Cartes vidéo — artistes exclusifs */
+/* Cartes vidéo — artistes exclusifs (9:16, format des vidéos iPhone) */
 .catalogue-video-card {
   position: relative;
-  height: 420px;
+  aspect-ratio: 9 / 16;
   border-radius: 18px;
   overflow: hidden;
   cursor: pointer;
@@ -342,7 +342,6 @@
 .cm-contact-btn:hover { background: #bfa57d; color: #fff; }
 
 @media (max-width: 576px) {
-  .catalogue-video-card { height: 360px; }
   .catalogue-tile { height: 260px; }
   .cm-header h2 { font-size: 1.5rem; }
 }
