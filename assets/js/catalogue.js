@@ -20,12 +20,17 @@ const CATALOGUE_API = "https://admin.masmoudiweddingplanner.com";
   const isVideo = v => /\.(mp4|webm|mov|m4v)(\?.*)?$/i.test(v || '');
   function mediaEl(v, opts = {}) {
     if (!v) return '';
-    if (isVideo(v)) {
+
+    // هذا السطر هو اللي باش يحل المشكلة
+    // باش يبدل أي 'http' بـ 'https' في أي رابط تصويرة ولا فيديو
+    const secureUrl = v.toString().replace(/^http:\/\//i, 'https://');
+    
+    if (isVideo(secureUrl)) {
       return opts.controls
-        ? `<video src="${esc(v)}" controls playsinline preload="metadata"></video>`
-        : `<video src="${esc(v)}" muted playsinline loop preload="metadata"></video>`;
+        ? `<video src="${esc(secureUrl)}" controls playsinline preload="metadata"></video>`
+        : `<video src="${esc(secureUrl)}" muted playsinline loop preload="metadata"></video>`;
     }
-    return `<img src="${esc(v)}" alt="${esc(opts.alt || '')}" loading="lazy">`;
+    return `<img src="${esc(secureUrl)}" alt="${esc(opts.alt || '')}" loading="lazy">`;
   }
 
   /* ---------- Rendu ---------- */
